@@ -21,3 +21,5 @@ export const jsLanguage = LRLanguage.define({
 export const js = function () {
   return new LanguageSupport(jsLanguage)
 }
+
+export {parser}

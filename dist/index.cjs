@@ -47,3 +47,4 @@ const js = function () {
 
 exports.js = js;
 exports.jsLanguage = jsLanguage;
+exports.parser = parser;

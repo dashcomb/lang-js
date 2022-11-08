@@ -41,4 +41,4 @@ const js = function () {
     return new LanguageSupport(jsLanguage);
 };
 
-export { js, jsLanguage };
+export { js, jsLanguage, parser };
