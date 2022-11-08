@@ -27,12 +27,12 @@ const parser = /*@__PURE__*/LRParser.deserialize({
 const jsLanguage = /*@__PURE__*/LRLanguage.define({
     parser: /*@__PURE__*/parser.configure({
         wrap: /*@__PURE__*/parseMixed(node => {
-            console.log(node.name);
             return node.name === "JsText" ? { parser: parser$1 } : null;
         }),
         props: [
             /*@__PURE__*/styleTags({
-                "{{ }}": tags.paren
+                StartJsTag: tags.paren,
+                EndJsTag: tags.paren
             }),
         ]
     })

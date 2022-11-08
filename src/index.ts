@@ -7,12 +7,12 @@ import {parseMixed} from "@lezer/common";
 export const jsLanguage = LRLanguage.define({
   parser: parser.configure({
     wrap:parseMixed(node=>{
-      console.log(node.name)
       return node.name === "JsText" ? {parser: jsParser} : null
     }),
     props: [
       styleTags({
-        "{{ }}": t.paren
+        StartJsTag: t.paren,
+        EndJsTag: t.paren
       }),
     ]
   })
