@@ -31,6 +31,7 @@ const parser = lr.LRParser.deserialize({
 const jsLanguage = language.LRLanguage.define({
     parser: parser.configure({
         wrap: common.parseMixed(node => {
+            console.log(node.name);
             return node.name === "JsText" ? { parser: javascript.parser } : null;
         }),
         props: [
