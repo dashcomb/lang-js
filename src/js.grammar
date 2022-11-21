@@ -1,12 +1,10 @@
 @top Program { expression* }
 
 expression {
-  JsTag { StartJsTag JsText* EndJsTag }
+  JsTag { "{{" JsText* "}}" }
 }
 @tokens {
   StartJsTag[closedBy="EndJsTag"] { "{{" }
   EndJsTag { "}}" }
   JsText { (![}])+ }
 }
-
-@detectDelim
