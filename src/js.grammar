@@ -5,8 +5,7 @@ expression {
   JsTag { "{{" JsText* "}}" }
 }
 @tokens {
-  StartJsTag[closedBy="EndJsTag"] { "{{" }
-  EndJsTag { "}}" }
   JsText { (![}])+ }
   Text { (![{])+ }
+  "{{" "}}"
 }
