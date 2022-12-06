@@ -1,11 +1,12 @@
 @top Program { expression* }
-@precedence { JsTag }
+
 expression {
-  Text |
   JsTag { "{{" JsText* "}}" }
 }
+
 @tokens {
   JsText { (![}])+ }
-  Text { (![{])+ }
   "{{" "}}"
 }
+
+@detectDelim
