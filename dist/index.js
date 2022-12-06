@@ -9,7 +9,7 @@ const parser = /*@__PURE__*/LRParser.deserialize({
   states: "!^QQOPOOOVOQO'#C^QQOPOOOOOO'#Cb'#CbOOOO'#Cc'#CcO_OQO,58xOOOO,58x,58xOOOO-E6`-E6`OOOO-E6a-E6aOOOO1G.d1G.d",
   stateData: "g~ORPO~OSSOTUO~OSSOTXO~O",
   goto: "iWPPXPPP]cTROQQQORVQQTPRWT",
-  nodeNames: "⚠ Program JsTag JsStartTag JsText JsStartCloseTag",
+  nodeNames: "⚠ Program JsTag JsStartTag JsText JsEndTag",
   maxTerm: 8,
   skippedNodes: [0],
   repeatNodeCount: 2,
