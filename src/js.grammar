@@ -2,11 +2,17 @@
 @precedence { JsTag }
 expression {
   Text |
-  JsTag { "{{" JsText* "}}" }
+  JsTag { JsStartTag JsText* JsEndTag }
 }
+@skip { spaces | newline }
 @tokens {
+  spaces[@export] { $[\u0009 \u000b\u00a0\u1680\u2000-\u200a\u202f\u205f\u3000\ufeff]+ }
+  newline[@export] { $[\r\n\u2028\u2029] }
+  JsStartTag { "{{" }
+  JsEndTag { "}}" }
   JsText { (![}])+ }
   Text { (![{])+ }
+  @precedence { spaces, newline, JsText, Text }
 }
 
 @detectDelim
