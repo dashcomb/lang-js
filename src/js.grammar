@@ -1,9 +1,11 @@
 @top Program { expression* }
+@precedence { JsTag }
 expression {
-  JsTag { JsStartTag JsText* JsEndTag }
+  Text |
+  JsTag { "{{" JsText* "}}" }
 }
 @tokens {
-  JsStartTag { "{{" }
-  JsEndTag { "}}" }
   JsText { (![}])+ }
+  Text { (![{])+ }
+  "{{" "}}"
 }
