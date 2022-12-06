@@ -9,11 +9,11 @@ export const jsLanguage = LRLanguage.define({
     wrap:parseMixed(node=>{
       return node.name === "JsText" ? {parser: jsParser} : null
     }),
-    props: [
-      styleTags({
-        "{{ }}": t.paren
-      }),
-    ]
+    // props: [
+    //   styleTags({
+    //     "{{ }}": t.paren
+    //   }),
+    // ]
   })
 })
 

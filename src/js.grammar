@@ -7,5 +7,7 @@ expression {
 @tokens {
   JsText { (![}])+ }
   Text { (![{])+ }
-  "{{" "}}"
+  "{" "}"
 }
+
+@detectDelim
