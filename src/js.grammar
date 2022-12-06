@@ -1,9 +1,9 @@
 @top Program { expression* }
 expression {
-  JsTag { JsStartTag JsText* JsStartCloseTag }
+  JsTag { JsStartTag JsText* JsEndTag }
 }
 @tokens {
   JsStartTag { "{{" }
-  JsStartCloseTag { "}}" }
+  JsEndTag { "}}" }
   JsText { (![}])+ }
 }
