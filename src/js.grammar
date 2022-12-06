@@ -12,7 +12,7 @@ expression {
   JsEndTag { "}}" }
   JsText { (![}])+ }
   Text { (![{])+ }
-  @precedence { spaces, newline, JsText, Text }
+  @precedence { JsText, spaces, newline, Text }
 }
 
 @detectDelim
