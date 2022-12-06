@@ -1,13 +1,19 @@
 @top Program { expression* }
-@precedence { JsTag }
+@precedence { JsTag,JsStartTag,JsStartCloseTag }
 expression {
   Text |
-  JsTag { "{{" JsText* "}}" }
-}
-@tokens {
-  JsText { (![}])+ }
-  Text { (![{])+ }
-  "{" "}"
+  JsTag { JsStartTag JsText* JsStartCloseTag }
 }
 
+@tokens {
+  JsStartTag { "{{" }
+  JsStartCloseTag { "}}" }
+  "{" "}"
+}
+JsText {
+  !JsStartCloseTag
+}
+Text{
+  !JsStartTag
+}
 @detectDelim
