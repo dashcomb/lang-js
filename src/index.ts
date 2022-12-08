@@ -10,9 +10,9 @@ export const jsLanguage = LRLanguage.define({
       return node.name === "JsText" ? {parser: jsParser} : null
     })
   }),
-  // languageData: {
-  //   closeBrackets: {brackets: ["{{","(", "[", "{", "'", '"']},
-  // }
+  languageData: {
+    closeBrackets: {brackets: ["(", "[", "{", "'", '"']},
+  }
 })
 
 export const js = function () {
