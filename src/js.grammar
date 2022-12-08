@@ -9,7 +9,9 @@ expression {
   JsEndTag { "}}" }
   JsText { (![}] | "}")+ }
   Text { (![{] | "{")+ }
-  @precedence { JsEndTag,JsStartTag,JsText,Text }
+  @precedence { JsStartTag,Text }
+  @precedence { JsEndTag,JsText }
+  "{{" "}}"
 }
 
 @detectDelim
