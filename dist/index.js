@@ -29,9 +29,9 @@ const jsLanguage = /*@__PURE__*/LRLanguage.define({
             return node.name === "JsText" ? { parser: parser$1 } : null;
         })
     }),
-    languageData: {
-        closeBrackets: { brackets: ["{{", "(", "[", "{", "'", '"'] },
-    }
+    // languageData: {
+    //   closeBrackets: {brackets: ["{{","(", "[", "{", "'", '"']},
+    // }
 });
 const js = function () {
     return new LanguageSupport(jsLanguage);
