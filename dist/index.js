@@ -31,6 +31,8 @@ const jsLanguage = /*@__PURE__*/LRLanguage.define({
         }),
         props: [
             /*@__PURE__*/styleTags({
+                JsStartTag: tags.paren,
+                JsEndTag: tags.paren,
                 "{{ }}": tags.paren
             })
         ]
