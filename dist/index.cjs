@@ -3,6 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var language = require('@codemirror/language');
+var highlight = require('@lezer/highlight');
 var lr = require('@lezer/lr');
 var javascript = require('@lezer/javascript');
 var common = require('@lezer/common');
@@ -31,10 +32,16 @@ const jsLanguage = language.LRLanguage.define({
     parser: parser.configure({
         wrap: common.parseMixed(node => {
             return node.name === "JsText" ? { parser: javascript.parser } : null;
-        })
+        }),
+        props: [
+            highlight.styleTags({
+                JsStartTag: highlight.tags.paren,
+                JsEndTag: highlight.tags.paren
+            })
+        ]
     }),
     languageData: {
-        closeBrackets: { brackets: ["(", "[", "{", "'", '"'] },
+        closeBrackets: { brackets: ["{{", "(", "[", "{", "'", '"'] },
     }
 });
 const js = function () {

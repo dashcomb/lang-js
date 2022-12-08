@@ -1,4 +1,5 @@
 import { LRLanguage, LanguageSupport } from '@codemirror/language';
+import { styleTags, tags } from '@lezer/highlight';
 import { LRParser } from '@lezer/lr';
 import { parser as parser$1 } from '@lezer/javascript';
 import { parseMixed } from '@lezer/common';
@@ -27,10 +28,16 @@ const jsLanguage = /*@__PURE__*/LRLanguage.define({
     parser: /*@__PURE__*/parser.configure({
         wrap: /*@__PURE__*/parseMixed(node => {
             return node.name === "JsText" ? { parser: parser$1 } : null;
-        })
+        }),
+        props: [
+            /*@__PURE__*/styleTags({
+                JsStartTag: tags.paren,
+                JsEndTag: tags.paren
+            })
+        ]
     }),
     languageData: {
-        closeBrackets: { brackets: ["(", "[", "{", "'", '"'] },
+        closeBrackets: { brackets: ["{{", "(", "[", "{", "'", '"'] },
     }
 });
 const js = function () {
