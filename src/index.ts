@@ -11,8 +11,7 @@ export const jsLanguage = LRLanguage.define({
     }),
     props:[
       styleTags({
-        JsStartTag:t.paren,
-        JsEndTag:t.paren
+        "{{ }}":t.paren
       })
     ]
   }),

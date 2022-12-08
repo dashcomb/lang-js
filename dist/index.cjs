@@ -35,8 +35,7 @@ const jsLanguage = language.LRLanguage.define({
         }),
         props: [
             highlight.styleTags({
-                JsStartTag: highlight.tags.paren,
-                JsEndTag: highlight.tags.paren
+                "{{ }}": highlight.tags.paren
             })
         ]
     }),
