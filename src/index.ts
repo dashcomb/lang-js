@@ -15,10 +15,7 @@ export const jsLanguage = LRLanguage.define({
         JsEndTag:t.paren
       })
     ]
-  }),
-  languageData: {
-    closeBrackets: {brackets: ["{{","(", "[", "{", "'", '"']},
-  }
+  })
 })
 
 export const js = function () {
