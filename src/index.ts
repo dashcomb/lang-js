@@ -11,7 +11,7 @@ export const jsLanguage = LRLanguage.define({
     })
   }),
   languageData: {
-    closeBrackets: {brackets: ["{{","(", "[", "{", "'", '"']},
+    closeBrackets: {brackets: ["(", "[", "{", "'", '"']},
   }
 })
 

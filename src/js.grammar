@@ -11,7 +11,7 @@ expression {
   Text { (![{] | "{")+ }
   @precedence { JsStartTag,Text }
   @precedence { JsEndTag,JsText }
-  "{{" "}}"
+  "{" "}"
 }
 
 @detectDelim
