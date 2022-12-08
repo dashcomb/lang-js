@@ -34,7 +34,7 @@ const jsLanguage = language.LRLanguage.define({
         })
     }),
     languageData: {
-        closeBrackets: { brackets: ["(", "[", "{", "'", '"'] },
+        closeBrackets: { brackets: ["{{", "(", "[", "{", "'", '"'] },
     }
 });
 const js = function () {
