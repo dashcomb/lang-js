@@ -7,10 +7,8 @@ expression {
 @tokens {
   JsStartTag { "{{" }
   JsEndTag { "}}" }
-  JsText { (![}] | "}")+ }
-  Text { (![{] | "{")+ }
-  @precedence { JsStartTag,Text }
-  @precedence { JsEndTag,JsText }
+  JsText { (![}])+ }
+  Text { (![{])+ }
 }
 
 @detectDelim
