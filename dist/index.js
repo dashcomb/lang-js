@@ -28,7 +28,10 @@ const jsLanguage = /*@__PURE__*/LRLanguage.define({
         wrap: /*@__PURE__*/parseMixed(node => {
             return node.name === "JsText" ? { parser: parser$1 } : null;
         })
-    })
+    }),
+    languageData: {
+        closeBrackets: { brackets: ["(", "[", "{", "'", '"'] }
+    }
 });
 const js = function () {
     return new LanguageSupport(jsLanguage);

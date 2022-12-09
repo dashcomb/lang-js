@@ -32,7 +32,10 @@ const jsLanguage = language.LRLanguage.define({
         wrap: common.parseMixed(node => {
             return node.name === "JsText" ? { parser: javascript.parser } : null;
         })
-    })
+    }),
+    languageData: {
+        closeBrackets: { brackets: ["(", "[", "{", "'", '"'] }
+    }
 });
 const js = function () {
     return new language.LanguageSupport(jsLanguage);
