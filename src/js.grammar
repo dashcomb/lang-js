@@ -7,9 +7,8 @@ expression {
 @tokens {
   JsStartTag { "{{" }
   JsEndTag { "}}" }
-  JsText { (![}] | '}')+ }
+  JsText { (![}])+ }
   Text { (![{])+ }
-  @precedence { JsEndTag,JsText }
   "{" "}"
 }
 

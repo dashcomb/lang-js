@@ -11,7 +11,7 @@ var common = require('@lezer/common');
 const parser = lr.LRParser.deserialize({
   version: 14,
   states: "!dQQOPOOOYOQO'#CaOOOO'#Cf'#CfOOOO'#Cc'#CcQQOPOOOOOO'#Cd'#CdObOQO,58{OOOO,58{,58{OOOO-E6a-E6aOOOO-E6b-E6bOOOO1G.g1G.g",
-  stateData: "m~OQQOSPO~ORVOUTO~ORYOUTO~ORU~",
+  stateData: "j~OQQOSPO~ORVOUTO~ORYOUTO~O",
   goto: "pZPPPPP[P`fPlTQOSQSORWSQUPRXUTROS",
   nodeNames: "⚠ Program Text JsEndTag JsStartTag JsTag JsText",
   maxTerm: 10,
@@ -21,10 +21,10 @@ const parser = lr.LRParser.deserialize({
   ],
   skippedNodes: [0],
   repeatNodeCount: 2,
-  tokenData: "%URRVO#oh#o#p!v#p#qh#q#r#x#r;'Sh;'S;=`!p<%lOhRoVQPUQO#oh#o#p!U#p#qh#q#rh#r;'Sh;'S;=`!p<%lOhQ!ZTUQO#q!U#q#r!U#r;'S!U;'S;=`!j<%lO!UQ!mP;=`<%l!UR!sP;=`<%lhR!{VUQO#o!U#o#p#b#p#q!U#q#r!U#r;'S!U;'S;=`!j<%lO!UR#iTSPUQO#q!U#q#r!U#r;'S!U;'S;=`!j<%lO!UR$PVQPUQO#oh#o#p!U#p#qh#q#r$f#r;'Sh;'S;=`!p<%lOhR$oVQPRQUQO#oh#o#p!U#p#qh#q#rh#r;'Sh;'S;=`!p<%lOh",
+  tokenData: "%SRRVO#oh#o#p#[#p#qh#q#r$W#r;'Sh;'S;=`#U<%lOhRoVUQQPO#oh#o#p!U#p#qh#q#r!m#r;'Sh;'S;=`#U<%lOhQ!ZSUQO#q!U#r;'S!U;'S;=`!g<%lO!UQ!jP;=`<%l!UP!rSQPO#o!m#p;'S!m;'S;=`#O<%lO!mP#RP;=`<%l!mR#XP;=`<%lhR#aUUQO#o!U#o#p#s#p#q!U#r;'S!U;'S;=`!g<%lO!UR#zSSPUQO#q!U#r;'S!U;'S;=`!g<%lO!UR$]UQPO#o!m#p#q!m#q#r$o#r;'S!m;'S;=`#O<%lO!mR$vSRQQPO#o!m#p;'S!m;'S;=`#O<%lO!m",
   tokenizers: [0, 1],
   topRules: {"Program":[0,1]},
-  tokenPrec: 26
+  tokenPrec: 0
 });
 
 const jsLanguage = language.LRLanguage.define({
