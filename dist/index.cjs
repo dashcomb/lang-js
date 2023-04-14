@@ -21,7 +21,7 @@ const parser = lr.LRParser.deserialize({
   ],
   skippedNodes: [0],
   repeatNodeCount: 2,
-  tokenData: "%SRRVO#oh#o#p#[#p#qh#q#r$W#r;'Sh;'S;=`#U<%lOhRoVUQQPO#oh#o#p!U#p#qh#q#r!m#r;'Sh;'S;=`#U<%lOhQ!ZSUQO#q!U#r;'S!U;'S;=`!g<%lO!UQ!jP;=`<%l!UP!rSQPO#o!m#p;'S!m;'S;=`#O<%lO!mP#RP;=`<%l!mR#XP;=`<%lhR#aUUQO#o!U#o#p#s#p#q!U#r;'S!U;'S;=`!g<%lO!UR#zSSPUQO#q!U#r;'S!U;'S;=`!g<%lO!UR$]UQPO#o!m#p#q!m#q#r$o#r;'S!m;'S;=`#O<%lO!mR$vSRQQPO#o!m#p;'S!m;'S;=`#O<%lO!m",
+  tokenData: "#w~RVO#oh#o#p!p#p#qh#q#r#l#r;'Sh;'S;=`!j<%lOhRoUUQQPO#oh#o#p!R#p#qh#r;'Sh;'S;=`!j<%lOhQ!WSUQO#q!R#r;'S!R;'S;=`!d<%lO!RQ!gP;=`<%l!RR!mP;=`<%lhR!uUUQO#o!R#o#p#X#p#q!R#r;'S!R;'S;=`!d<%lO!RR#`SSPUQO#q!R#r;'S!R;'S;=`!d<%lO!R~#oP#q#r#r~#wOR~",
   tokenizers: [0, 1],
   topRules: {"Program":[0,1]},
   tokenPrec: 0
